@@ -1,6 +1,15 @@
-let button = document.querySelector('.changeButton')
-let text = document.querySelector('.text')
+let button = document.getElementById('clickButton');
+let output = document.getElementById('output');
+
+let count = 0;
+
+function updateCount () {
+    output.textContent = count;
+}
 
 button.addEventListener('click', function () {
-    text.textContent = 'I Change The Text!!!';
+    ++count;
+    updateCount();
 });
+
+updateCount();
